@@ -28,6 +28,9 @@ def setup_sauce_labs_ios_driver():
     # Device Config
     options.set_capability('appium:deviceName', 'DevideID') # - PRIVATE DEVICE WITH SIM
 
+    # Auto Accept Alerts
+    options.set_capability('appium:autoAcceptAlerts', True)
+
     # Sauce Options
     sauce_options = {
         'username': os.environ.get('SAUCE_USERNAME'),
